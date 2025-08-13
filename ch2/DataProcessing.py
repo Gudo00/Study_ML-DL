@@ -20,3 +20,19 @@ print(fish_data[:5])
 fish_target = np.concatenate((np.ones(35), np.zeros(14)))
 
 print(fish_target)
+
+# sklearn으로 훈련 세트와 테스트 세트 나누기
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(fish_data, fish_target, random_state=42)
+
+print("skelearn으로 나눔")
+
+# 값
+print(train_input.shape, test_input.shape)
+
+# 타겟
+print(train_target.shape, test_target.shape)
+
+print (test_target)
